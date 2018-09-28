@@ -10,6 +10,28 @@ int mystrlen(char * str){
   return len;
 }
 
+char * mystrcpy( char *dest, char *source ){
+  return 0;
+}
+
+char * mystrcat( char *dest, char *source ){
+  return 0;
+}
+
+
+int mystrcmp( char *s1, char *s2 ){
+  return 0;
+}
+
+char * mystrchr( char *s, char c ){
+  return 0;
+}
+
+char * mystrstr( char *s1, char * s2 ){
+  return 0;
+}
+
+
 int main(){
   char * s1 = "HeLlO";
   char s2[] = "HeLlo";
