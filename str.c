@@ -11,7 +11,11 @@ int mystrlen(char *str){
 }
 
 char * mystrcpy(char *dest, char *source){
-  return 0;
+  dest = *source;
+  while(*dest++ || *source++){
+    printf("%s","hello");
+  }
+  return dest;
 }
 
 char * mystrcat(char *dest, char *source){
@@ -50,6 +54,10 @@ int main(){
   printf("The length of \"%s\" is: %d\n", s3, mystrlen(s3));
   */
 
+  printf("mystrcpy(s1,s2) : %s", mystrcpy(s1,s2));
+  printf("mystrcpy(s2,s3) : %s", mystrcpy(s2,s3));
+  printf("mystrcpy(s1,s3) : %s", mystrcpy(s1,s3));
+  
   /*
   printf("%p\n", mystrchr(s1, 'H'));
   printf("%p\n", mystrchr(s1, 'e'));
