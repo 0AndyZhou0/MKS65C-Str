@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <string.h>
+
 
 int mystrlen(char * str){
   int len = 0;
@@ -10,11 +12,18 @@ int mystrlen(char * str){
 
 int main(){
   char * s1 = "HeLlO";
-  char s2[] = "HeLlO";
+  char s2[] = "HeLlo";
   char s3[256] = "HeLlO";
 
-  printf("s1 = %s\ns2 = %s\ns3 = %s",s1,s2,s3);
-  printf("strlen(s1)%d\nmystrlen(s1)%d\n",strlen(s1),mystrlen(s1));
-  printf("strlen(s2)%d\nmystrlen(s2)%d\n",strlen(s2),mystrlen(s2));
-  printf("strlen(s3)%d\nmystrlen(s3)%d\n",strlen(s3),mystrlen(s3));
+  printf("The length of \"%s\" is: %d\n", s1, mystrlen(s1));
+  printf("The length of \"%s\" is: %d\n", s2, mystrlen(s2));
+  printf("The length of \"%s\" is: %d\n", s3, mystrlen(s3));
+
+  /*
+  printf("%s compared to %s is: %d\n", s1, s2, strcmp(s1,s2));
+  printf("%s compared to %s is: %d\n", s2, s3, mystrcmp(s2,s3));
+  printf("%s compared to %s is: %d\n", s1, s3, mystrcmp(s1,s3));
+  */
+
+  return 0;
 }
