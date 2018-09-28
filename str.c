@@ -2,7 +2,7 @@
 #include <string.h>
 
 
-int mystrlen(char * str){
+int mystrlen(char *str){
   int len = 0;
   while(*str++){
     len++;
@@ -10,24 +10,25 @@ int mystrlen(char * str){
   return len;
 }
 
-char * mystrcpy( char *dest, char *source ){
+char * mystrcpy(char *dest, char *source){
+  
   return 0;
 }
 
-char * mystrcat( char *dest, char *source ){
+char * mystrcat(char *dest, char *source){
   return 0;
 }
 
 
-int mystrcmp( char *s1, char *s2 ){
+int mystrcmp(char *s1, char *s2){
   return 0;
 }
 
-char * mystrchr( char *s, char c ){
+char * mystrchr(char *s, char c){
   return 0;
 }
 
-char * mystrstr( char *s1, char * s2 ){
+char * mystrstr(char *s1, char * s2){
   return 0;
 }
 
