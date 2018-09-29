@@ -11,9 +11,10 @@ int mystrlen(char *str){
 }
 
 char * mystrcpy(char *dest, char *source){
-  dest = *source;
-  while(*dest++ || *source++){
-    printf("%s","hello");
+  int i = 0;
+  while(*(dest+i) || *(source+i)){
+    *(dest+i) = *(source+i);
+    i++;
   }
   return dest;
 }
@@ -44,9 +45,11 @@ char * mystrstr(char *s1, char * s2){
 
 
 int main(){
-  char * s1 = "HeLlO";
-  char s2[] = "HeLlo";
-  char s3[256] = "HeLlO";
+  char *s1 = "Hello";
+  char s2[] = "Hello";
+  char s3[256] = "Hello";
+  char s4[] = "Playo";
+  char s5[256] = "asdfa";
 
   /*
   printf("The length of \"%s\" is: %d\n", s1, mystrlen(s1));
@@ -54,9 +57,9 @@ int main(){
   printf("The length of \"%s\" is: %d\n", s3, mystrlen(s3));
   */
 
-  printf("mystrcpy(s1,s2) : %s", mystrcpy(s1,s2));
-  printf("mystrcpy(s2,s3) : %s", mystrcpy(s2,s3));
-  printf("mystrcpy(s1,s3) : %s", mystrcpy(s1,s3));
+  //printf("mystrcpy(s1,s2) : %s\n", mystrcpy(s1,s4));
+  printf("mystrcpy(s2,s3) : %s\n", mystrcpy(s4,s5));
+  //printf("mystrcpy(s1,s3) : %s\n", mystrcpy(s1,s5));
   
   /*
   printf("%p\n", mystrchr(s1, 'H'));
