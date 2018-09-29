@@ -26,14 +26,21 @@ char * mystrcat(char *dest, char *source){
     printf("destination: %s\nsource:      %s\n\n", dest, source);
     *(dest+i) = *source++;
     i++;
-  }
-  
+  }  
   return dest;
 }
 
 
 int mystrcmp(char *s1, char *s2){
-  return 0;
+  int i = 0;
+  while(*(s1+i) && *(s2+i) && *(s1+i) == *(s2+i)){
+    //printf("s1: %c\n", *(s1+i));
+    //printf("s2: %c\n", *(s2+i));
+    i++;
+  }
+  //printf("s1: %c\n", *(s1+i));
+  //printf("s2: %c\n", *(s2+i));
+  return *(s1+i)-*(s2+i);
 }
 
 char * mystrchr(char *s, char c){
@@ -85,6 +92,13 @@ int main(){
   printf("\n~~~~~~~~~~~~~~~~~~~~~\n");
   */
 
+  /*
+  printf("Testing mystrcmp\n~~~~~~~~~~~~~~~~~~~~~\n");
+  printf("%d\n", mystrcmp(s2, s3));
+  printf("%d\n", mystrcmp(s4, s5));
+  printf("%d\n", mystrcmp(s5, s4));
+  printf("\n~~~~~~~~~~~~~~~~~~~~~\n");
+  */
   
   /*
   printf("Testing mystrchr\n~~~~~~~~~~~~~~~~~~~~~\n");
