@@ -13,6 +13,7 @@ int mystrlen(char *str){
 char * mystrcpy(char *dest, char *source){
   int i = 0;
   while(*(dest+i) || *(source+i)){
+    //printf("destination: %s\nsource:      %s\n\n", dest, source);
     *(dest+i) = *(source+i);
     i++;
   }
@@ -48,8 +49,9 @@ int main(){
   char *s1 = "Hello";
   char s2[] = "Hello";
   char s3[256] = "Hello";
+  
   char s4[] = "Playo";
-  char s5[256] = "asdfa";
+  char s5[256] = "Hi";
 
   /*
   printf("The length of \"%s\" is: %d\n", s1, mystrlen(s1));
@@ -58,7 +60,7 @@ int main(){
   */
 
   //printf("mystrcpy(s1,s2) : %s\n", mystrcpy(s1,s4));
-  printf("mystrcpy(s2,s3) : %s\n", mystrcpy(s4,s5));
+  printf("destination: %s\n", mystrcpy(s2,s5));
   //printf("mystrcpy(s1,s3) : %s\n", mystrcpy(s1,s5));
   
   /*
