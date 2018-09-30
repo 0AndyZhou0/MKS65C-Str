@@ -57,9 +57,9 @@ char * mystrchr(char *s, char c){
 char * mystrstr(char *s1, char * s2){
   while(*s1){
     if(*s1 == *s2){
-      int i = mystrlen(s2);
-      while(i-- && *(s1+i) && *(s2+i) && (*(s1+i) == *(s2+i))){
-	if(!i){
+      int i = 0;
+      while(i++ < mystrlen(s2) && *(s1+i) && *(s1+i) == *(s2+i)){
+	if(i == mystrlen(s2) - 1){
 	  //printf("%s\n",s1);
 	  return s1;
 	}
