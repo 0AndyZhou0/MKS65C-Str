@@ -55,6 +55,14 @@ char * mystrchr(char *s, char c){
 }
 
 char * mystrstr(char *s1, char * s2){
+  while(*s1++){
+    if(s1 == s2){
+      int i = 0;
+      while(*(s2+i) && *(s1+i) == *(s2+i)){
+	i++;
+      }
+    }
+  }
   return 0;
 }
 
@@ -147,7 +155,11 @@ int main(){
   printf("%s compared to %s is: %d\n", s5, s3, strcmp(s5,s3));
   printf("\n~~~~~~~~~~~~~~~~~~~~~\n");
   */
-  
+
+  printf("Testing mystrstr\n~~~~~~~~~~~~~~~~~~~~~owo\n");
+  printf("mystrstr(s3,s4) : %s\n", mystrstr(s3,s4));
+  printf("mystrstr(s3,s5) : %s\n", mystrstr(s3,s5));
+  printf("mystrstr(s5,s4) : %s\n", mystrstr(s5,s4));
 
   return 0;
 }
