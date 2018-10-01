@@ -55,13 +55,17 @@ char * mystrchr(char *s, char c){
 }
 
 char * mystrstr(char *s1, char * s2){
-  while(*s1++){
-    if(s1 == s2){
+  while(*s1){
+    if(*s1 == *s2){
       int i = 0;
-      while(*(s2+i) && *(s1+i) == *(s2+i)){
-	i++;
+      while(i++ < mystrlen(s2) && *(s1+i) && *(s1+i) == *(s2+i)){
+	if(i == mystrlen(s2) - 1){
+	  //printf("%s\n",s1);
+	  return s1;
+	}
       }
     }
+    s1++;
   }
   return 0;
 }
@@ -158,8 +162,16 @@ int main(){
 
   /*
   printf("Testing mystrstr\n~~~~~~~~~~~~~~~~~~~~~owo\n");
+  printf("mystrstr(\"MHillo\",\"Hi\") : %s\n", mystrstr("MHillo","Hi"));
+  printf("strstr(\"MHillo\",\"Hi\") : %s\n", strstr("MHillo","Hi"));
+  printf("mystrstr(s2,s3) : %s\n", mystrstr(s2,s3));
+  printf("strstr(s2,s3) : %s\n", strstr(s2,s3));
+  printf("mystrstr(s1,s3) : %s\n", mystrstr(s1,s3));
+  printf("strstr(s1,s3) : %s\n", strstr(s1,s3));
   printf("mystrstr(s3,s4) : %s\n", mystrstr(s3,s4));
+  printf("strstr(s3,s4) : %s\n", strstr(s3,s4));
   printf("mystrstr(s3,s5) : %s\n", mystrstr(s3,s5));
+  printf("strstr(s3,s5) : %s\n", strstr(s3,s5));
   printf("mystrstr(s5,s4) : %s\n", mystrstr(s5,s4));
   printf("\n~~~~~~~~~~~~~~~~~~~~~uwu\n");
   */
@@ -225,7 +237,7 @@ int main(){
   printf("mystrchr(s1, 'x') : %p\n", mystrchr(s1, 'x'));
   printf("strchr(s1, 'x') : %p\n", strchr(s1, 'x'));
   printf("\n~~~~~~~~~~~~~~~~~~~~~\n");
-
+  
   printf("Testing mystrcmp\n~~~~~~~~~~~~~~~~~~~~~\n");
   printf("mystrcmp(s1,s2) : %d\n", s1, s2, mystrcmp(s1,s2));
   printf("strcmp(s1,s2) : %d\n", s1, s2, strcmp(s1,s2));
