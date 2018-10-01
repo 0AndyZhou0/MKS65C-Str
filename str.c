@@ -156,10 +156,93 @@ int main(){
   printf("\n~~~~~~~~~~~~~~~~~~~~~\n");
   */
 
+  /*
   printf("Testing mystrstr\n~~~~~~~~~~~~~~~~~~~~~owo\n");
   printf("mystrstr(s3,s4) : %s\n", mystrstr(s3,s4));
   printf("mystrstr(s3,s5) : %s\n", mystrstr(s3,s5));
   printf("mystrstr(s5,s4) : %s\n", mystrstr(s5,s4));
+  printf("\n~~~~~~~~~~~~~~~~~~~~~uwu\n");
+  */
 
+  printf("%s","Variables\n");
+  printf("s1 : \"%s\"\n", s1);
+  printf("s2 : \"%s\"\n", s2);
+  printf("s3 : \"%s\"\n", s3);
+  printf("s4 : \"%s\"\n", s4);
+  printf("s5 : \"%s\"\n", s5);
+  
+  printf("Testing mystrlen\n~~~~~~~~~~~~~~~~~~~~~\n");
+  printf("mystrlen(s1) : %d\n", s1, mystrlen(s1));
+  printf("strlen(s1) : %ld\n\n", s1, strlen(s1));
+ 
+  printf("mystrlen(s2) : %d\n", s2, mystrlen(s2));
+  printf("strlen(s2) : %ld\n\n", s2, strlen(s3));
+  
+  printf("mystrlen(s3) : %d\n", s3, mystrlen(s3));
+  printf("strlen(s3) : %ld\n\n", s3, strlen(s3));
+  printf("\n~~~~~~~~~~~~~~~~~~~~~\n");
+
+  printf("Testing mystrcpy\n~~~~~~~~~~~~~~~~~~~~~\n");
+  //CANNOT INTO IMMUTABLE STRINGS
+  //printf("mystrcpy(s1,s4)  destination: %s\n", mystrcpy(s1,s4));
+  //printf("strcpy(s1,s4)  destination: %s\n\n", strcpy(s1,s4));
+  
+  printf("mystrcpy(s2,s5) : %s\n", mystrcpy(s2,s5));
+  printf("strcpy(s2,s5) : %s\n\n", strcpy(s2,s5));
+  
+  printf("mystrcpy(s5,s1) : %s\n", mystrcpy(s5,s1));
+  printf("strcpy(s5,s1) : %s\n\n", strcpy(s5,s1));
+  
+  printf("\n~~~~~~~~~~~~~~~~~~~~~\n");
+
+  printf("Testing mystrcat\n~~~~~~~~~~~~~~~~~~~~~\n");
+  printf("mystrcat(s3,s4) : %s\n", mystrcat(s3,s4));
+  printf("strcat(s3,s4) : %s\n", strcat(s3,s4));
+  
+  printf("mystrcat(s3,s5) : %s\n", mystrcat(s3,s5));
+  printf("strcat(s3,s5) : %s\n", strcat(s3,s5));
+  
+  printf("mystrcat(s5,s4) : %s\n", mystrcat(s5,s4));
+  printf("strcat(s5,s4) : %s\n", mystrcat(s5,s4));
+  printf("\n~~~~~~~~~~~~~~~~~~~~~\n");
+
+  printf("Testing mystrcmp\n~~~~~~~~~~~~~~~~~~~~~\n");
+  printf("mystrcmp(s2, s3) : %d\n", mystrcmp(s2, s3));
+  printf("strcmp(s2, s3):  %d\n", strcmp(s2, s3));
+  printf("mystrcmp(s4, s5) : %d\n", mystrcmp(s4, s5));
+  printf("strcmp(s4, s5) : %d\n", strcmp(s4, s5));
+  printf("mystrcmp(s5, s4) : %d\n", mystrcmp(s5, s4));
+  printf("strcmp(s5, s4) : %d\n", strcmp(s5, s4));
+  printf("\n~~~~~~~~~~~~~~~~~~~~~\n");
+
+  printf("Testing mystrchr\n~~~~~~~~~~~~~~~~~~~~~\n");
+  printf("mystrchr(s1, 'H') : %p\n", mystrchr(s1, 'H'));
+  printf("strchr(s1, 'H') : %p\n", strchr(s1, 'H'));
+  printf("mystrchr(s1, 'e') : %p\n", mystrchr(s1, 'e'));
+  printf("strchr(s1, 'e') : %p\n", strchr(s1, 'e'));
+  printf("mystrchr(s1, 'o') : %p\n", mystrchr(s1, 'o'));
+  printf("strchr(s1, 'o') : %p\n", strchr(s1, 'o'));
+  printf("mystrchr(s1, 'x') : %p\n", mystrchr(s1, 'x'));
+  printf("strchr(s1, 'x') : %p\n", strchr(s1, 'x'));
+  printf("\n~~~~~~~~~~~~~~~~~~~~~\n");
+
+  printf("Testing mystrcmp\n~~~~~~~~~~~~~~~~~~~~~\n");
+  printf("mystrcmp(s1,s2) : %d\n", s1, s2, mystrcmp(s1,s2));
+  printf("strcmp(s1,s2) : %d\n", s1, s2, strcmp(s1,s2));
+  printf("mystrcmp(s1,s4) : %d\n", s1, s4, mystrcmp(s1,s4));
+  printf("strcmp(s1,s4) : %d\n", s1, s4, strcmp(s1,s4));
+  printf("mystrcmp(s5,s3) : %d\n", s5, s3, mystrcmp(s5,s3));
+  printf("strcmp(s5,s3) : %d\n", s5, s3, strcmp(s5,s3));
+  printf("\n~~~~~~~~~~~~~~~~~~~~~\n");
+
+  printf("Testing mystrstr\n~~~~~~~~~~~~~~~~~~~~~owo\n");
+  printf("mystrstr(s3,s4) : %s\n", mystrstr(s3,s4));
+  printf("strstr(s3,s4) : %s\n", strstr(s3,s4));
+  printf("mystrstr(s3,s5) : %s\n", mystrstr(s3,s5));
+  printf("strstr(s3,s5) : %s\n", strstr(s3,s5));
+  printf("mystrstr(s5,s4) : %s\n", mystrstr(s5,s4));
+  printf("strstr(s5,s4) : %s\n", strstr(s5,s4));
+  printf("\n~~~~~~~~~~~~~~~~~~~~~uwu\n");
+  
   return 0;
 }
