@@ -177,21 +177,21 @@ int main(){
   */
 
   printf("%s","Variables\n");
-  printf("s1 : \"%s\"\n", s1);
-  printf("s2 : \"%s\"\n", s2);
-  printf("s3 : \"%s\"\n", s3);
-  printf("s4 : \"%s\"\n", s4);
-  printf("s5 : \"%s\"\n", s5);
+  printf("char *s1 : \"%s\"\n", s1);
+  printf("s2[] : \"%s\"\n", s2);
+  printf("s3[256] : \"%s\"\n", s3);
+  printf("s4[] : \"%s\"\n", s4);
+  printf("s5[256] : \"%s\"\n\m", s5);
   
   printf("Testing mystrlen\n~~~~~~~~~~~~~~~~~~~~~\n");
-  printf("mystrlen(s1) : %d\n", s1, mystrlen(s1));
-  printf("strlen(s1) : %ld\n\n", s1, strlen(s1));
+  printf("mystrlen(s1) : %d\n", mystrlen(s1));
+  printf("strlen(s1) : %ld\n\n", strlen(s1));
  
-  printf("mystrlen(s2) : %d\n", s2, mystrlen(s2));
-  printf("strlen(s2) : %ld\n\n", s2, strlen(s3));
+  printf("mystrlen(s2) : %d\n", mystrlen(s2));
+  printf("strlen(s2) : %ld\n\n", strlen(s3));
   
-  printf("mystrlen(s3) : %d\n", s3, mystrlen(s3));
-  printf("strlen(s3) : %ld\n\n", s3, strlen(s3));
+  printf("mystrlen(s3) : %d\n", mystrlen(s3));
+  printf("strlen(s3) : %ld\n\n", strlen(s3));
   printf("\n~~~~~~~~~~~~~~~~~~~~~\n");
 
   printf("Testing mystrcpy\n~~~~~~~~~~~~~~~~~~~~~\n");
@@ -209,13 +209,31 @@ int main(){
 
   printf("Testing mystrcat\n~~~~~~~~~~~~~~~~~~~~~\n");
   printf("mystrcat(s3,s4) : %s\n", mystrcat(s3,s4));
+  strcpy(s3,"Hello");
+  strcpy(s4,"Playo");
+  strcpy(s5,"Hi");
   printf("strcat(s3,s4) : %s\n", strcat(s3,s4));
-  
+  strcpy(s3,"Hello");
+  strcpy(s4,"Playo");
+  strcpy(s5,"Hi");
+
   printf("mystrcat(s3,s5) : %s\n", mystrcat(s3,s5));
+  strcpy(s3,"Hello");
+  strcpy(s4,"Playo");
+  strcpy(s5,"Hi");
   printf("strcat(s3,s5) : %s\n", strcat(s3,s5));
+  strcpy(s3,"Hello");
+  strcpy(s4,"Playo");
+  strcpy(s5,"Hi");
   
   printf("mystrcat(s5,s4) : %s\n", mystrcat(s5,s4));
+  strcpy(s3,"Hello");
+  strcpy(s4,"Playo");
+  strcpy(s5,"Hi");
   printf("strcat(s5,s4) : %s\n", mystrcat(s5,s4));
+  strcpy(s3,"Hello");
+  strcpy(s4,"Playo");
+  strcpy(s5,"Hi");
   printf("\n~~~~~~~~~~~~~~~~~~~~~\n");
 
   printf("Testing mystrcmp\n~~~~~~~~~~~~~~~~~~~~~\n");
@@ -239,21 +257,26 @@ int main(){
   printf("\n~~~~~~~~~~~~~~~~~~~~~\n");
   
   printf("Testing mystrcmp\n~~~~~~~~~~~~~~~~~~~~~\n");
-  printf("mystrcmp(s1,s2) : %d\n", s1, s2, mystrcmp(s1,s2));
-  printf("strcmp(s1,s2) : %d\n", s1, s2, strcmp(s1,s2));
-  printf("mystrcmp(s1,s4) : %d\n", s1, s4, mystrcmp(s1,s4));
-  printf("strcmp(s1,s4) : %d\n", s1, s4, strcmp(s1,s4));
-  printf("mystrcmp(s5,s3) : %d\n", s5, s3, mystrcmp(s5,s3));
-  printf("strcmp(s5,s3) : %d\n", s5, s3, strcmp(s5,s3));
+  printf("mystrcmp(s1,s2) : %d\n", mystrcmp(s1,s2));
+  printf("strcmp(s1,s2) : %d\n", strcmp(s1,s2));
+  printf("mystrcmp(s1,s4) : %d\n", mystrcmp(s1,s4));
+  printf("strcmp(s1,s4) : %d\n", strcmp(s1,s4));
+  printf("mystrcmp(s5,s3) : %d\n", mystrcmp(s5,s3));
+  printf("strcmp(s5,s3) : %d\n", strcmp(s5,s3));
   printf("\n~~~~~~~~~~~~~~~~~~~~~\n");
 
   printf("Testing mystrstr\n~~~~~~~~~~~~~~~~~~~~~owo\n");
+  printf("mystrstr(\"MHillo\",\"Hi\") : %s\n", mystrstr("MHillo","Hi"));
+  printf("strstr(\"MHillo\",\"Hi\") : %s\n", strstr("MHillo","Hi"));
+  printf("mystrstr(s2,s3) : %s\n", mystrstr(s2,s3));
+  printf("strstr(s2,s3) : %s\n", strstr(s2,s3));
+  printf("mystrstr(s1,s3) : %s\n", mystrstr(s1,s3));
+  printf("strstr(s1,s3) : %s\n", strstr(s1,s3));
   printf("mystrstr(s3,s4) : %s\n", mystrstr(s3,s4));
   printf("strstr(s3,s4) : %s\n", strstr(s3,s4));
   printf("mystrstr(s3,s5) : %s\n", mystrstr(s3,s5));
   printf("strstr(s3,s5) : %s\n", strstr(s3,s5));
   printf("mystrstr(s5,s4) : %s\n", mystrstr(s5,s4));
-  printf("strstr(s5,s4) : %s\n", strstr(s5,s4));
   printf("\n~~~~~~~~~~~~~~~~~~~~~uwu\n");
   
   return 0;
