@@ -26,7 +26,8 @@ char * mystrcat(char *dest, char *source){
     //printf("destination: %s\nsource:      %s\n\n", dest, source);
     *(dest+i) = *source++;
     i++;
-  }  
+  }
+  *(dest+i) = *source++;
   return dest;
 }
 
